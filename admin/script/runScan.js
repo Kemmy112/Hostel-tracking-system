@@ -63,24 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
             timelineList.innerHTML += timelineItem;
         });
     }
-    
-    document.getElementById("checkInBtn").addEventListener("click", function () {
-        const decodedText = document.getElementById("qrResult").textContent;
-        updateLogs("Check-in", decodedText, "");
-        alert("Check-in successful!");
-        document.getElementById("scannedInfo").classList.add("d-none");
-    });
-    
-    document.getElementById("checkOutBtn").addEventListener("click", function () {
-        const decodedText = document.getElementById("qrResult").textContent;
-        const purpose = document.getElementById("purposeInput").value.trim();
-        if (!purpose) {
-            alert("Please enter a valid purpose before checking out.");
-            return;
-        }
-        updateLogs("Check-out", decodedText, purpose);
-        alert("Check-out successful!");
-        document.getElementById("scannedInfo").classList.add("d-none");
-    });
 });
-
+    //Still for the qr 
+    
