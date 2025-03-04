@@ -90,35 +90,48 @@ document.getElementById("clearSearchBtn").addEventListener("click", function () 
 
 //Assign Room fxnality
 
-document.getElementById("assignRoomForm").addEventListener("submit", function (event) {
-    event.preventDefault();
+const students = [{}]; //This is where the actual storage is done. The rooms along with their details will be updated from the backend
 
-    let id = document.getElementById("studentIdInput").value.trim();
-    let room = document.getElementById("roomNumber").value.trim();
-    let date = document.getElementById("assignmentDate").value.trim();
-    let notes = document.getElementById("notes").value.trim();
+// Ensure the DOM is fully loaded before running the script
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("assignRoomForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the default form submission
 
-    if (id.length !== 10 || isNaN(id)) {
-        alert("Student ID must be exactly 10 digits!");
-        return;
-    }
+        // Get values from the form fields and trim whitespace
+        let id = document.getElementById("studentIdInput").value.trim();
+        let room = document.getElementById("roomNumb").value.trim();
+        let floor = document.getElementById("searchFloor").value.trim(); // Corrected to match the ID in HTML
+        let date = document.getElementById("assignmentDate").value.trim();
+        let notes = document.getElementById("notes").value.trim();
 
-    if (date && id && room && notes) {
-        let newRoom = {
-            id: id,
-            room: room,
-            date: date,
-            notes: notes
-        };
+        // Validate Student ID
+        if (id.length !== 10 || isNaN(id)) {
+            alert("Student ID must be exactly 10 digits!");
+            return; // Exit the function if validation fails
+        }
 
-        students.push(newRoom); // Assuming `students` is the list of all students
-        alert("Student Added Successfully!");
+        // Check if all required fields are filled
+        if (id && room && floor && date) { // Removed notes from the required check
+            let newRoom = {
+                id: id,
+                room: room,
+                floor: floor,
+                date: date,
+                // notes: notes // Notes can be optional
+            };
 
-        document.getElementById("assignRoomForm").reset(); // Clear form
+            // Assuming `students` is the list of all students
+            students.push(newRoom); 
+            alert("Student Added Successfully!");
 
-        let modal = new bootstrap.Modal(document.getElementById("assignRoomModal"));
-        modal.hide(); // Close modal after submission
-    } else {
-        alert("Please fill out all fields!");
-    }
+            // Clear the form
+            document.getElementById("assignRoomForm").reset();
+
+            // Close the modal
+            let modal = new bootstrap.Modal(document.getElementById("assignRoomModal"));
+            modal.hide();
+        } else {
+            alert("Please fill out all required fields!");
+        }
+    });
 });

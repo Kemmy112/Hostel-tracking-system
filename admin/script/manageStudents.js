@@ -13,10 +13,8 @@ hamburger.addEventListener("click", function(){
 //Simulated student data for the demo, this will be changed.
 
 const students = [
-    { id: "0211123456", name: "Ekemini-Abasi Moses", room: "Room 016", contact: "08012345678" },
-    { id: "0211209874", name: "Joanna Doe", room: "Room 027", contact: "08098765432" },
-    { id: "0211382667", name: "Favour Aghedo", room: "Room 047", contact: "09165095142" }
-];
+    {}
+]; //The actual data should be added by the backend.
 
 document.getElementById("searchBtn").addEventListener("click", function () {
     let searchValue = document.getElementById("studentSearch").value.trim().toLowerCase();

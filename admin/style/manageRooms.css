@@ -169,3 +169,12 @@ a.sidebar-link:hover{
     margin-left: auto;
    
 }
+
+ /* .content #roomNumber {
+    -moz-appearance: textfield; /* This removes the spin buttons */
+
+
+#roomNumber ::-webkit-inner-spin-button
+, #roomNumber ::-webkit-outer-spin-button{
+    display: none;
+}

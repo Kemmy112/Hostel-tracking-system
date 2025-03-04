@@ -23,7 +23,7 @@
         <aside id="sidebar">
             <div class="d-flex justify-content-between p-4">
                 <div class="sidebar-logo">
-                    <a href="#">AdminPanel</a>
+                    <a href="#">StudentPanel</a>
                 </div>
                 <button class="toggle-btn border-0" type="button">
                     <i id="iconic" class="bx bx-chevrons-right"></i>
@@ -98,7 +98,6 @@
                         <div class="card-header text-white" style="background-color: #0b0f19;">Student QR Code</div>
                         <div class="card-body text-center">
                             <span id="qrScanner" class="w-600"></span>
-                            <p class="mt-2 text-muted">Scan this code.</p>
                         </div>
                     </div>
                 </div>
@@ -131,24 +130,11 @@
     
     <!-- New Row: Two Large Equal Width Cards -->
     <div class="row mb-4">
-        <div class="col-md-6">
-            <div class="card shadow-sm">
-                <div class="card-header text-white" style="background-color: #0b0f19;">Room Details</div>
-                <div class="card-body">
-                    <p><strong>Room Number:</strong> <span id="roomNumber">-</span></p>
-                    <p><strong>Bed Space:</strong> <span id="bedSpace">-</span></p>
-                    <p><strong>Roommate(s):</strong> <span id="roommates">-</span></p>
+                <div class="col-md-6">
+         <div class="card h-100 p-3 shadow">
+                    <h5 class="card-title"> Your Recent Logs</h5>
+                    <div id="logCard" class="overflow-auto" style="max-height: 400px;"></div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card shadow-sm">
-                <div class="card-header text-white" style="background-color: #0b0f19;">Meal Plan Status</div>
-                <div class="card-body">
-                    <p><strong>Current Plan:</strong> <span id="mealPlan">-</span></p>
-                    <p><strong>Next Meal:</strong> <span id="nextMeal">-</span></p>
-                </div>
-            </div>
         </div>
     </div>
     

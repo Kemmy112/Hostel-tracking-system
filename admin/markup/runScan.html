@@ -123,19 +123,14 @@
               <label for="studentIdInput" class="form-label">Student ID</label>
               <input type="text" id="studentIdInput" class="form-control" placeholder="Enter Student ID">
 
-              <label for="purposeInput" class="form-label mt-3">Purpose (Required for Check-Out)</label>
-              <input type="text" id="purposeInput" class="form-control" placeholder="Enter purpose">
+              <!-- <label for="purposeInput" class="form-label mt-3">Purpose (Required for Check-Out)</label>
+              <input type="text" id="purposeInput" class="form-control" placeholder="Enter purpose"> -->
 
-              <div class="d-flex justify-content-between mt-4">
-                  <button class="btn btn-primary" id="manualCheckInBtn">Check In</button>
-                  <button class="btn btn-warning" id="manualCheckOutBtn" disabled>Check Out</button>
-              </div>
+              <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
           </div>
       </div>
   </div>
 </div>
-
-
             <div class="mb-3">
                 <h4>Run Scan</h4>
                 <p>Scan a student ID to retrieve hostel details and check-in/out history.</p>
@@ -164,10 +159,10 @@
                                 <p><strong>Room Number:</strong> <span id="scannedRoom">-</span></p>
                                 <p><strong>Time:</strong> <span id="scanTime">-</span></p>
                                 <p><strong>Purpose:</strong> <span id="scanReason">-</span></p>
-                                <div class="d-flex gap-2">
+                                <!-- <div class="d-flex gap-2">
                                     <button class="btn btn-primary w-50" id="checkInBtn">Check-in</button>
                                     <button class="btn btn-warning w-50" id="checkOutBtn">Check-out</button>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
