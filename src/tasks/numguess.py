@@ -4,11 +4,11 @@
 
 import random;
 
-masterMind = (random.randint(1,20));
+masterMind = (random.randint(1,10));
 attempts = 0; # Initial number of trials.
 
 print("🎲 Welcome to the Number Guessing Game!")
-print("I'm thinking of a number between 1 and 20.")
+print("I'm thinking of a number between 1 and 10.")
 
 while True:
     user_input = int(input("Enter your guess: "))
